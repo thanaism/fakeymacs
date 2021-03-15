@@ -474,8 +474,8 @@ def configure(keymap):
     # IME の「単語登録」プログラムを利用するための設定を行う
 
     ## IME の「単語登録」プログラムを起動するキーを指定する
-    # fc.word_register_key = None
-    fc.word_register_key = "C-CloseBracket"
+    fc.word_register_key = None
+    # fc.word_register_key = "C-CloseBracket"
 
     ## IME の「単語登録」プログラムとそのパラメータを指定する
 
