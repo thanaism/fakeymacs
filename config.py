@@ -369,8 +369,8 @@ def configure(keymap):
     fc.use_emacs_ime_mode = True
 
     # Emacs日本語入力モードが有効なときに表示するバルーンメッセージを指定する
-    # fc.emacs_ime_mode_balloon_message = None
-    fc.emacs_ime_mode_balloon_message = "▲"
+    fc.emacs_ime_mode_balloon_message = None
+    # fc.emacs_ime_mode_balloon_message = "▲"
 
     # IME をトグルで切り替えるキーを指定する（複数指定可）
     fc.toggle_input_method_key = []
@@ -755,14 +755,15 @@ def configure(keymap):
             ime_status = keymap.getWindow().getImeStatus()
 
         if not fakeymacs.is_playing_kmacro:
-            if ime_status:
-                message = "[あ]"
-            else:
-                message = "[A]"
+            # if ime_status:
+                # message = "[あ]"
+            # else:
+                # message = "[A]"
 
             try:
                 # IME の状態をバルーンヘルプで表示する
-                keymap.popBalloon("ime_status", message, 500)
+                if 0:
+                    keymap.popBalloon("ime_status", message, 500)
             except:
                 pass
 
@@ -1386,7 +1387,6 @@ def configure(keymap):
                 keys_list[0] = addSideOfModifierKey(keys_list[0])
         else:
             keys_lists = []
-
         return keys_lists
 
     def define_key(window_keymap, keys, command, skip_check=True):
