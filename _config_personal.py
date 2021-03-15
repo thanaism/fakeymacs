@@ -78,20 +78,22 @@ fc.emacs_exclusion_key  = {"chrome.exe"       : ["C-l", "C-t"],
                           }
 
 # 左右どちらの Ctrlキーを使うかを指定する（"L": 左、"R": 右）
-# fc.side_of_ctrl_key = "R"
+fc.side_of_ctrl_key = "R"
 
 # Escキーを Metaキーとして使うかどうかを指定する（True: 使う、False: 使わない）
 # （True（Metaキーとして使う）に設定されている場合、ESC の二回押下で ESC が入力されます）
-# fc.use_esc_as_meta = True
+fc.use_esc_as_meta = False
 
 # Emacs日本語入力モードを使うかどうかを指定する（True: 使う、False: 使わない）
-fc.use_emacs_ime_mode = True
+if 0:
+    fc.use_emacs_ime_mode = True
 
 # IME をトグルで切り替えるキーを指定する（複数指定可）
 fc.toggle_input_method_key = []
-fc.toggle_input_method_key += ["C-Yen"]
-fc.toggle_input_method_key += ["C-o"]
-# fc.toggle_input_method_key += ["O-LAlt"]
+if 0:
+	fc.toggle_input_method_key += ["C-Yen"]
+	fc.toggle_input_method_key += ["C-o"]
+	fc.toggle_input_method_key += ["O-LAlt"]
 
 #---------------------------------------------------------------------------------------------------
 # IME を切り替えるキーの組み合わせ（disable、enable の順）を指定する（複数指定可）
@@ -99,28 +101,33 @@ fc.toggle_input_method_key += ["C-o"]
 fc.set_input_method_key = []
 
 ## 日本語キーボードを利用している場合、<無変換> キーで英数入力、<変換> キーで日本語入力となる
-fc.set_input_method_key += [["(29)", "(28)"]]
+if 0:
+    fc.set_input_method_key += [["(29)", "(28)"]]
 
 ## LAlt の単押しで英数入力、RAlt の単押しで日本語入力となる
 ## （JetBrains 製の IDE でこの設定を利用するためには、ツールボタンをオンにする必要があるようです。
 ##   設定は、View -> Appearance -> Tool Window Bars を有効にしてください。）
-# fc.set_input_method_key += [["O-LAlt", "O-RAlt"]]
+fc.set_input_method_key += [["O-LAlt", "O-RAlt"]]
 
 ## C-j や C-j C-j で 英数入力となる（toggle_input_method_key の設定と併せ、C-j C-o で日本語入力となる）
-# fc.set_input_method_key += [["C-j", None]]
+if 0:
+	fc.set_input_method_key += [["C-j", None]]
 
 ## C-j で英数入力、C-o で日本語入力となる（toggle_input_method_key の設定より優先）
-# fc.set_input_method_key += [["C-j", "C-o"]]
+if 0:
+	fc.set_input_method_key += [["C-j", "C-o"]]
 #---------------------------------------------------------------------------------------------------
 
 # VSCode の Terminal内 で ４つのキー（Ctrl+k、Ctrl+r、Ctrl+s、Ctrl+y）のダイレクト入力機能を使うか
 # どうかを指定する（True: 使う、False: 使わない）
-# fc.use_direct_input_in_vscode_terminal = True
+fc.use_direct_input_in_vscode_terminal = True
 
 # アプリケーションキーとして利用するキーを指定する
 # （修飾キーに Alt は使えないようです）
-# fc.application_key = "O-RCtrl"
-# fc.application_key = "W-m"
+if 0:
+	fc.application_key = "O-RCtrl"
+if 0:
+	fc.application_key = "W-m"
 
 # [section-base-2] ---------------------------------------------------------------------------------
 
@@ -205,47 +212,57 @@ fc.lancherList_listers = [
 # [section-extensions] -----------------------------------------------------------------------------
 
 # VSCode で Extension のインストールが必要な機能の設定を行う
-# fc.vscode_dired = True
-# fc.vscode_recenter = True
-# fc.vscode_occur = True
-# exec(readConfigExtension(r"vscode_extensions/config.py"), dict(globals(), **locals()))
+if 0:
+    fc.vscode_dired = True
+    fc.vscode_recenter = True
+    fc.vscode_occur = True
+    exec(readConfigExtension(r"vscode_extensions/config.py"), dict(globals(), **locals()))
 
 # Everything を起動するキーを指定する
-# exec(readConfigExtension(r"everything/config.py"), dict(globals(), **locals()))
+if 0:
+    exec(readConfigExtension(r"everything/config.py"), dict(globals(), **locals()))
 
 # ブラウザ向けのキーの設定を行う
-# exec(readConfigExtension(r"browser_key/config.py"), dict(globals(), **locals()))
+if 0:
+	exec(readConfigExtension(r"browser_key/config.py"), dict(globals(), **locals()))
 
 # Chrome 系ブラウザで Ctl-x C-b を入力した際、Chrome の拡張機能 Quick Tabs を起動する
 # （github1s を利用する場合、本機能を有効にせずに Quick Tabs を利用すればキー被りが発生しません）
-# fc.quick_tabs_shortcut_key = "A-q"
-# exec(readConfigExtension(r"chrome_quick_tabs/config.py"), dict(globals(), **locals()))
+if 0:
+	fc.quick_tabs_shortcut_key = "A-q"
+	exec(readConfigExtension(r"chrome_quick_tabs/config.py"), dict(globals(), **locals()))
 
 # Emacs の shell-command-on-region の機能をサポートする
-# fc.linux_tool = "WSL"
-# fc.linux_tool = "MSYS2"
-# fc.linux_tool = "Cygwin"
-# fc.linux_tool = "BusyBox"
-# fc.bash_options = []
-# fc.bash_options = ["-l"]
-# exec(readConfigExtension(r"shell_command_on_region\config.py"), dict(globals(), **locals()))
+if 0:
+	fc.linux_tool = "WSL"
+	fc.linux_tool = "MSYS2"
+	fc.linux_tool = "Cygwin"
+	fc.linux_tool = "BusyBox"
+	fc.bash_options = []
+	fc.bash_options = ["-l"]
+	exec(readConfigExtension(r"shell_command_on_region\config.py"), dict(globals(), **locals()))
 
 # 指定したアプリケーションソフトに F2（編集モード移行）を割り当てるキーを設定する
-# exec(readConfigExtension(r"edit_mode\config.py"), dict(globals(), **locals()))
+if 0:
+	exec(readConfigExtension(r"edit_mode\config.py"), dict(globals(), **locals()))
 
 # Emacs の場合、IME 切り替え用のキーを C-\ に置き換える
-# exec(readConfigExtension(r"real_emacs\config.py"), dict(globals(), **locals()))
+if 0:
+	exec(readConfigExtension(r"real_emacs\config.py"), dict(globals(), **locals()))
 
 # 英語キーボード設定をした OS 上で日本語キーボードを利用する場合の設定を行う
-# fc.change_keyboard_startup = "US"
-# fc.change_keyboard_startup = "JP"
-# exec(readConfigExtension(r"change_keyboard\config.py"), dict(globals(), **locals()))
+if 0:
+	fc.change_keyboard_startup = "US"
+	fc.change_keyboard_startup = "JP"
+	exec(readConfigExtension(r"change_keyboard\config.py"), dict(globals(), **locals()))
 
 # クリップボードに格納したファイルもしくはフォルダのパスを emacsclient で開く
-# fc.emacsclient_name = r"<emacsclient プログラムをインストールしている Windows のパス>\wslclient-n.exe"
-# exec(readConfigExtension(r"emacsclient/config.py"), dict(globals(), **locals()))
+if 0:
+	fc.emacsclient_name = r"<emacsclient プログラムをインストールしている Windows のパス>\wslclient-n.exe"
+	exec(readConfigExtension(r"emacsclient/config.py"), dict(globals(), **locals()))
 
 # 指定したキーを押下したときに IME の状態を表示する
-# fc.pop_ime_balloon_key = ["C-Semicolon"]
-# fc.pop_ime_balloon_key = ["O-" + fc.side_of_ctrl_key + "Ctrl"] # Ctrl キーの単押し
-# exec(readConfigExtension(r"pop_ime_balloon/config.py"), dict(globals(), **locals()))
+if 0:
+	fc.pop_ime_balloon_key = ["C-Semicolon"]
+	fc.pop_ime_balloon_key = ["O-" + fc.side_of_ctrl_key + "Ctrl"] # Ctrl キーの単押し
+	exec(readConfigExtension(r"pop_ime_balloon/config.py"), dict(globals(), **locals()))

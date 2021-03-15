@@ -369,8 +369,8 @@ def configure(keymap):
     fc.use_emacs_ime_mode = True
 
     # Emacs日本語入力モードが有効なときに表示するバルーンメッセージを指定する
-    # fc.emacs_ime_mode_balloon_message = None
-    fc.emacs_ime_mode_balloon_message = "▲"
+    fc.emacs_ime_mode_balloon_message = None
+    # fc.emacs_ime_mode_balloon_message = "▲"
 
     # IME をトグルで切り替えるキーを指定する（複数指定可）
     fc.toggle_input_method_key = []
@@ -474,8 +474,8 @@ def configure(keymap):
     # IME の「単語登録」プログラムを利用するための設定を行う
 
     ## IME の「単語登録」プログラムを起動するキーを指定する
-    # fc.word_register_key = None
-    fc.word_register_key = "C-CloseBracket"
+    fc.word_register_key = None
+    # fc.word_register_key = "C-CloseBracket"
 
     ## IME の「単語登録」プログラムとそのパラメータを指定する
 
@@ -755,14 +755,15 @@ def configure(keymap):
             ime_status = keymap.getWindow().getImeStatus()
 
         if not fakeymacs.is_playing_kmacro:
-            if ime_status:
-                message = "[あ]"
-            else:
-                message = "[A]"
+            # if ime_status:
+                # message = "[あ]"
+            # else:
+                # message = "[A]"
 
             try:
                 # IME の状態をバルーンヘルプで表示する
-                keymap.popBalloon("ime_status", message, 500)
+                if 0:
+                    keymap.popBalloon("ime_status", message, 500)
             except:
                 pass
 
@@ -1378,7 +1379,7 @@ def configure(keymap):
             elif keys_lists[0][0].startswith("M-"):
                 key = re.sub("^M-", "", keys_lists[0][0])
                 keys_lists[0][0] = "A-" + key
-                keys_lists.append(["C-OpenBracket", key])
+                # keys_lists.append(["C-OpenBracket", key])
                 if fc.use_esc_as_meta:
                     keys_lists.append(["Esc", key])
 
@@ -1386,7 +1387,6 @@ def configure(keymap):
                 keys_list[0] = addSideOfModifierKey(keys_list[0])
         else:
             keys_lists = []
-
         return keys_lists
 
     def define_key(window_keymap, keys, command, skip_check=True):
@@ -1628,7 +1628,7 @@ def configure(keymap):
     ## マルチストロークキーの設定
     define_key(keymap_emacs, "Ctl-x",         keymap.defineMultiStrokeKeymap(fc.ctl_x_prefix_key))
     define_key(keymap_emacs, "C-q",           keymap.defineMultiStrokeKeymap("C-q"))
-    define_key(keymap_emacs, "C-OpenBracket", keymap.defineMultiStrokeKeymap("C-OpenBracket"))
+    # define_key(keymap_emacs, "C-OpenBracket", keymap.defineMultiStrokeKeymap("C-OpenBracket"))
     if fc.use_esc_as_meta:
         define_key(keymap_emacs, "Esc", keymap.defineMultiStrokeKeymap("Esc"))
 
@@ -1679,7 +1679,8 @@ def configure(keymap):
                         define_key(keymap_emacs, "C-q " + mkey, reset_search(reset_undo(reset_counter(reset_mark(self_insert_command(mkey))))))
 
     ## Escキーの設定
-    define_key(keymap_emacs, "C-OpenBracket C-OpenBracket", reset_undo(reset_counter(self_insert_command("Esc"))))
+    # define_key(keymap_emacs, "C-OpenBracket C-OpenBracket", reset_undo(reset_counter(self_insert_command("Esc"))))
+    define_key(keymap_emacs, "C-OpenBracket", reset_undo(reset_counter(self_insert_command("Esc"))))
     if fc.use_esc_as_meta:
         define_key(keymap_emacs, "Esc Esc", reset_undo(reset_counter(self_insert_command("Esc"))))
     else:
