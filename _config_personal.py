@@ -97,12 +97,13 @@ fc.skip_settings_key    = {"keymap_base"      : ["*W-g"], # ベース Keymap
 fc.emacs_exclusion_key  = {"chrome.exe"       : ["C-l", "C-t"],
                            "msedge.exe"       : ["C-l", "C-t"],
                            "firefox.exe"      : ["C-l", "C-t"],
-                           "Code.exe"         : ["C-S-b", "C-S-f", "C-S-p", "C-S-n", "C-S-a", "C-S-e"],
+                           "Code.exe"         : [ "C-S-b", "C-S-f", "C-S-p", "C-S-n", "C-S-a", "C-S-e", "C-o", "C-r", "C-s", "C-l", "C-d"],
+                           "Code - Insiders.exe": [ "C-S-b", "C-S-f", "C-S-p", "C-S-n", "C-S-a", "C-S-e", "C-o", "C-r", "C-s", "C-l", "C-d"],
                            }
 
 # 左右どちらの Ctrl キーを使うかを指定する（"L": 左、"R": 右）
-fc.side_of_ctrl_key = "L"
-# fc.side_of_ctrl_key = "R"
+# fc.side_of_ctrl_key = "L"
+fc.side_of_ctrl_key = "R"
 
 # Esc キーを Meta キーとして使うかどうかを指定する（True: 使う、False: 使わない）
 # （True（Meta キーとして使う）に設定されている場合、ESC の二回押下で ESC が入力されます）
@@ -112,16 +113,16 @@ fc.use_esc_as_meta = False
 fc.use_emacs_ime_mode = True
 
 # Emacs 日本語入力モードが有効なときに表示するバルーンメッセージを指定する
-# fc.emacs_ime_mode_balloon_message = None
-fc.emacs_ime_mode_balloon_message = "▲"
+fc.emacs_ime_mode_balloon_message = None
+# fc.emacs_ime_mode_balloon_message = "▲"
 
 # IME の状態を表示するバルーンメッセージを表示するかどうかを指定する（True: 表示する、False: 表示しない）
 fc.use_ime_status_balloon = True
 
 # IME をトグルで切り替えるキーを指定する（複数指定可）
 fc.toggle_input_method_key = []
-fc.toggle_input_method_key += ["C-Yen"]
-fc.toggle_input_method_key += ["C-o"]
+# fc.toggle_input_method_key += ["C-Yen"]
+# fc.toggle_input_method_key += ["C-o"]
 # fc.toggle_input_method_key += ["O-LAlt"]
 
 #---------------------------------------------------------------------------------------------------
@@ -139,7 +140,7 @@ fc.set_input_method_key += [["(26)", "(22)"]]
 ## LAlt の単押しで英数入力、RAlt の単押しで日本語入力となる
 ## （JetBrains 製の IDE でこの設定を利用するためには、ツールボタンをオンにする必要があるようです。
 ##   設定は、View -> Appearance -> Tool Window Bars を有効にしてください。）
-# fc.set_input_method_key += [["O-LAlt", "O-RAlt"]]
+fc.set_input_method_key += [["O-LAlt", "O-RAlt"]]
 
 ## C-j や C-j C-j で 英数入力となる（toggle_input_method_key の設定と併せ、C-j C-o で日本語入力となる）
 # fc.set_input_method_key += [["C-j", None]]
@@ -312,6 +313,7 @@ if 1:
     fc.vscode_target += ["chrome.exe",
                          "msedge.exe",
                          "firefox.exe",
+                         "Code - Insiders.exe",
                          ]
 
     # fc.vscode_prefix_key = [["C-;", "C-A-;"]]
