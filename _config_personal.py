@@ -1,4 +1,4 @@
-﻿# -*- mode: python; coding: utf-8-with-signature-dos -*-
+# -*- mode: python; coding: utf-8-with-signature-dos -*-
 
 # https://stackoverflow.com/questions/2904274/globals-and-locals-in-python-exec
 # https://docs.python.org/3/library/functions.html?highlight=exec%20global#exec
@@ -83,7 +83,7 @@ fc.ime_target          += []
 fc.skip_settings_key    = {"keymap_base"      : ["*W-g"], # ベース Keymap
                            "keymap_global"    : [],       # グローバル Keymap
                            "keymap_emacs"     : [],       # Emacs キーバインド対象アプリ用 Keymap
-                           "keymap_vscode"    : [],       # Emacs キーバインド VSCode 拡張用 Keymap
+                           "keymap_vscode"    : ["C-r", "C-s"],       # Emacs キーバインド VSCode 拡張用 Keymap
                            "keymap_ime"       : [],       # IME 切り替え専用アプリ用 Keymap
                            "keymap_ei"        : [],       # Emacs 日本語入力モード用 Keymap
                            "keymap_tsw"       : [],       # タスク切り替え画面用 Keymap
