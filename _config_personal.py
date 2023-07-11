@@ -1,4 +1,4 @@
-﻿# -*- mode: python; coding: utf-8-with-signature-dos -*-
+# -*- mode: python; coding: utf-8-with-signature-dos -*-
 
 # https://stackoverflow.com/questions/2904274/globals-and-locals-in-python-exec
 # https://docs.python.org/3/library/functions.html?highlight=exec%20global#exec
@@ -97,8 +97,8 @@ fc.skip_settings_key    = {"keymap_base"      : ["*W-g"], # ベース Keymap
 fc.emacs_exclusion_key  = {"chrome.exe"       : ["C-l", "C-t"],
                            "msedge.exe"       : ["C-l", "C-t"],
                            "firefox.exe"      : ["C-l", "C-t"],
-                           "Code.exe"         : [ "C-S-b", "C-S-f", "C-S-p", "C-S-n", "C-S-a", "C-S-e", "C-o", "C-r", "C-s", "C-l", "C-d", "C-/"],
-                           "Code - Insiders.exe": [ "C-S-b", "C-S-f", "C-S-p", "C-S-n", "C-S-a", "C-S-e", "C-o", "C-r", "C-s", "C-l", "C-d", "C-/"],
+                           "Code.exe"         : [ "C-S-b", "C-S-f", "C-S-p", "C-S-n", "C-S-a", "C-S-e", "C-o", "C-r", "C-l", "C-d", "C-/"],
+                           "Code - Insiders.exe": [ "C-S-b", "C-S-f", "C-S-p", "C-S-n", "C-S-a", "C-S-e", "C-o", "C-r", "C-l", "C-d", "C-/"],
                            }
 
 # 左右どちらの Ctrl キーを使うかを指定する（"L": 左、"R": 右）
@@ -108,6 +108,14 @@ fc.side_of_ctrl_key = "R"
 # Esc キーを Meta キーとして使うかどうかを指定する（True: 使う、False: 使わない）
 # （True（Meta キーとして使う）に設定されている場合、ESC の二回押下で ESC が入力されます）
 fc.use_esc_as_meta = False
+
+# Ctl-x プレフィックスキーに使うキーを指定する
+# （Ctl-x プレフィックスキーのモディファイアキーは、Ctrl または Alt のいずれかから指定してください）
+fc.ctl_x_prefix_key = "Alt-x"
+
+# スクロールに使うキーの組み合わせ（Up、Down の順）を指定する
+# fc.scroll_key = None # PageUp、PageDown キーのみを利用する
+fc.scroll_key = []
 
 # Emacs 日本語入力モードを使うかどうかを指定する（True: 使う、False: 使わない）
 fc.use_emacs_ime_mode = True
