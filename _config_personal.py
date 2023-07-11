@@ -97,8 +97,8 @@ fc.skip_settings_key    = {"keymap_base"      : ["*W-g"], # ベース Keymap
 fc.emacs_exclusion_key  = {"chrome.exe"       : ["C-l", "C-t"],
                            "msedge.exe"       : ["C-l", "C-t"],
                            "firefox.exe"      : ["C-l", "C-t"],
-                           "Code.exe"         : [ "C-S-b", "C-S-f", "C-S-p", "C-S-n", "C-S-a", "C-S-e", "C-o", "C-r", "C-s", "C-l", "C-d"],
-                           "Code - Insiders.exe": [ "C-S-b", "C-S-f", "C-S-p", "C-S-n", "C-S-a", "C-S-e", "C-o", "C-r", "C-s", "C-l", "C-d"],
+                           "Code.exe"         : [ "C-S-b", "C-S-f", "C-S-p", "C-S-n", "C-S-a", "C-S-e", "C-o", "C-r", "C-s", "C-l", "C-d", "C-/"],
+                           "Code - Insiders.exe": [ "C-S-b", "C-S-f", "C-S-p", "C-S-n", "C-S-a", "C-S-e", "C-o", "C-r", "C-s", "C-l", "C-d", "C-/"],
                            }
 
 # 左右どちらの Ctrl キーを使うかを指定する（"L": 左、"R": 右）
@@ -117,7 +117,7 @@ fc.emacs_ime_mode_balloon_message = None
 # fc.emacs_ime_mode_balloon_message = "▲"
 
 # IME の状態を表示するバルーンメッセージを表示するかどうかを指定する（True: 表示する、False: 表示しない）
-fc.use_ime_status_balloon = True
+fc.use_ime_status_balloon = False
 
 # IME をトグルで切り替えるキーを指定する（複数指定可）
 fc.toggle_input_method_key = []
