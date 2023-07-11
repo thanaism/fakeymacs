@@ -1,4 +1,4 @@
-# -*- mode: python; coding: utf-8-with-signature-dos -*-
+﻿# -*- mode: python; coding: utf-8-with-signature-dos -*-
 
 # https://stackoverflow.com/questions/2904274/globals-and-locals-in-python-exec
 # https://docs.python.org/3/library/functions.html?highlight=exec%20global#exec
@@ -97,8 +97,8 @@ fc.skip_settings_key    = {"keymap_base"      : ["*W-g"], # ベース Keymap
 fc.emacs_exclusion_key  = {"chrome.exe"       : ["C-l", "C-t"],
                            "msedge.exe"       : ["C-l", "C-t"],
                            "firefox.exe"      : ["C-l", "C-t"],
-                           "Code.exe"         : [ "C-S-b", "C-S-f", "C-S-p", "C-S-n", "C-S-a", "C-S-e", "C-o", "C-r", "C-l", "C-d", "C-/"],
-                           "Code - Insiders.exe": [ "C-S-b", "C-S-f", "C-S-p", "C-S-n", "C-S-a", "C-S-e", "C-o", "C-r", "C-l", "C-d", "C-/"],
+                           "Code.exe"         : [ "C-S-b", "C-S-f", "C-S-p", "C-S-n", "C-S-a", "C-S-e", "C-o", "C-r", "C-s", "C-l", "C-d", "C-/"],
+                           "Code - Insiders.exe": [ "C-S-b", "C-S-f", "C-S-p", "C-S-n", "C-S-a", "C-S-e", "C-o", "C-r", "C-s", "C-l", "C-d", "C-/"],
                            }
 
 # 左右どちらの Ctrl キーを使うかを指定する（"L": 左、"R": 右）
@@ -334,9 +334,9 @@ if 1:
     fc.vscode_recenter = False
     fc.vscode_recenter2 = False
     fc.vscode_occur = False
-    fc.vscode_quick_select = True
-    fc.vscode_input_sequence = True
-    fc.vscode_insert_numbers = True
+    fc.vscode_quick_select = False
+    fc.vscode_input_sequence = False
+    fc.vscode_insert_numbers = False
     fc.vscode_keyboard_macro = False
     fc.vscode_filter_text = False
 
