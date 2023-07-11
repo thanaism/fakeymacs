@@ -484,15 +484,15 @@ def zoom_in():
 
 ## マルチストロークキーの設定
 define_key_v("Ctl-x",  keymap.defineMultiStrokeKeymap(fc.ctl_x_prefix_key))
-define_key_v("M-",     keymap.defineMultiStrokeKeymap("Esc"))
-define_key_v("M-g",    keymap.defineMultiStrokeKeymap("M-g"))
-define_key_v("M-g M-", keymap.defineMultiStrokeKeymap("M-g Esc"))
+# define_key_v("M-",     keymap.defineMultiStrokeKeymap("Esc"))
+# define_key_v("M-g",    keymap.defineMultiStrokeKeymap("M-g"))
+# define_key_v("M-g M-", keymap.defineMultiStrokeKeymap("M-g Esc"))
 
 def mergeEmacsMultiStrokeKeymap():
     mergeMultiStrokeKeymap(keymap_vscode, keymap_emacs, "Ctl-x")
-    mergeMultiStrokeKeymap(keymap_vscode, keymap_emacs, "M-")
-    mergeMultiStrokeKeymap(keymap_vscode, keymap_emacs, "M-g")
-    mergeMultiStrokeKeymap(keymap_vscode, keymap_emacs, "M-g M-")
+    # mergeMultiStrokeKeymap(keymap_vscode, keymap_emacs, "M-")
+    # mergeMultiStrokeKeymap(keymap_vscode, keymap_emacs, "M-g")
+    # mergeMultiStrokeKeymap(keymap_vscode, keymap_emacs, "M-g M-")
     keymap_vscode.applying_func = None
 
 ## keymap_emacs キーマップのマルチストロークキーの設定を keymap_vscode キーマップにマージする
@@ -514,10 +514,10 @@ define_key_v("Ctl-x C-r", reset_search(reset_undo(reset_counter(reset_mark(recen
 define_key_v("Ctl-x C-l", reset_search(reset_undo(reset_counter(reset_mark(locate)))))
 
 ## 「カーソル移動」のキー設定
-define_key_v("M-g p",   reset_search(reset_undo(reset_counter(reset_mark(previous_error)))))
-define_key_v("M-g M-p", reset_search(reset_undo(reset_counter(reset_mark(previous_error)))))
-define_key_v("M-g n",   reset_search(reset_undo(reset_counter(reset_mark(next_error)))))
-define_key_v("M-g M-n", reset_search(reset_undo(reset_counter(reset_mark(next_error)))))
+# define_key_v("M-g p",   reset_search(reset_undo(reset_counter(reset_mark(previous_error)))))
+# define_key_v("M-g M-p", reset_search(reset_undo(reset_counter(reset_mark(previous_error)))))
+# define_key_v("M-g n",   reset_search(reset_undo(reset_counter(reset_mark(next_error)))))
+# define_key_v("M-g M-n", reset_search(reset_undo(reset_counter(reset_mark(next_error)))))
 define_key_v("Ctl-x `", reset_search(reset_undo(reset_counter(reset_mark(next_error)))))
 
 # define_key_v("A-p", self_insert_command("C-Up"))
@@ -592,8 +592,8 @@ else:
 define_key_v("Enter", post(reset_undo(reset_counter(reset_mark(repeat(newline))))))
 define_key_v("C-m",   post(reset_undo(reset_counter(reset_mark(repeat(newline))))))
 define_key_v("C-g",   reset_search(reset_counter(reset_mark(keyboard_quit_v2))))
-define_key_v("M-x",   reset_search(reset_undo(reset_counter(reset_mark(execute_extended_command)))))
-define_key_v("M-;",   reset_search(reset_undo(reset_counter(reset_mark(comment_dwim)))))
+# define_key_v("M-x",   reset_search(reset_undo(reset_counter(reset_mark(execute_extended_command)))))
+# define_key_v("M-;",   reset_search(reset_undo(reset_counter(reset_mark(comment_dwim)))))
 
 if is_japanese_keyboard:
     define_key_v("C-:", trigger_suggest)
