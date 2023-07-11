@@ -1,4 +1,4 @@
-# -*- mode: python; coding: utf-8-with-signature-dos -*-
+﻿# -*- mode: python; coding: utf-8-with-signature-dos -*-
 
 # https://stackoverflow.com/questions/2904274/globals-and-locals-in-python-exec
 # https://docs.python.org/3/library/functions.html?highlight=exec%20global#exec
@@ -94,9 +94,9 @@ fc.skip_settings_key    = {"keymap_base"      : ["*W-g"], # ベース Keymap
 # （リストに指定するキーは、Keyhac で指定可能なマルチストロークではないキーとしてください。
 #   Fakeymacs の記法の "M-f" や "Ctl-x d" などの指定はできません。"A-v"、"C-v" などが指定可能です。）
 # （ここで指定しなくとも、左右のモディファイアキーを使い分けることで入力することは可能です）
-fc.emacs_exclusion_key  = {"chrome.exe"       : ["C-l", "C-t"],
-                           "msedge.exe"       : ["C-l", "C-t"],
-                           "firefox.exe"      : ["C-l", "C-t"],
+fc.emacs_exclusion_key  = {"chrome.exe"       : ["C-l", "C-t", "C-r"],
+                           "msedge.exe"       : ["C-l", "C-t", "C-r"],
+                           "firefox.exe"      : ["C-l", "C-t", "C-r"],
                            "Code.exe"         : [ "C-S-b", "C-S-f", "C-S-p", "C-S-n", "C-S-a", "C-S-e", "C-o", "C-r", "C-s", "C-l", "C-d", "C-/"],
                            "Code - Insiders.exe": [ "C-S-b", "C-S-f", "C-S-p", "C-S-n", "C-S-a", "C-S-e", "C-o", "C-r", "C-s", "C-l", "C-d", "C-/"],
                            }
